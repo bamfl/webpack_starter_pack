@@ -36,7 +36,10 @@ module.exports = {
     rules: [
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset/resource',
+        type: 'asset',
+				generator: {
+					filename: 'assets/static/[hash][ext][query]'
+				}
       },
       {
         test: /\.css$/,
